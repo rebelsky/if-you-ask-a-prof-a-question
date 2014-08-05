@@ -70,8 +70,11 @@ P.title a:visited {
 p.librarian,
 p.faculty,
 p.student {
+  margin-top: 0;
+  margin-left: 2em;
   font-size: large;
   font-weight: bold;
+  margin-right: 2em;
 }
 
 p.librarian {
