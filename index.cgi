@@ -43,6 +43,15 @@ sub main {
   # Set up the page number counter
   my $pagenum = 0;
 
+  # Get the pronouns
+  my @pronouns = ("he/she/ze", "she/ze/he", "ze/he/she",
+                  "he/ze/she", "she/he/ze", "ze/she/he");
+  my @Pronouns = ("He/She/Ze", "She/Ze/He", "Ze/He/She",
+                  "He/Ze/She", "She/He/Ze", "Ze/She/He");
+  my $pro = ($page % 6);
+  my $pronoun = $pronouns[$pro];
+  my $Pronoun = $Pronouns[$pro];
+
   # Get started
   print "Content-type: text/html\n\n";
 
@@ -65,15 +74,15 @@ sub main {
             "What is the square root of four?");
   }
   elsif ($page == ++$pagenum) {
-    faculty("(S)he's likely to ask you a similar question.",
+    faculty("$Pronoun is likely to ask you a similar question.",
             "What do you think the square root of four is?");
   }
   elsif ($page == ++$pagenum) {
     student("When you answer the question,",
-            "The square root of four is <em>two</em>");
+            "The square root of four is <em>two</em>.");
   }
   elsif ($page == ++$pagenum) {
-    faculty("(S)he's likely to ask for an explanation.",
+    faculty("$Pronoun is likely to ask for an explanation.",
             "What makes you think the square root of four is two?");
   }
   elsif ($page == ++$pagenum) {
@@ -81,7 +90,7 @@ sub main {
             "My fourth grade teacher told me.");
   }
   elsif ($page == ++$pagenum) {
-    faculty("(S)he's likely to ask for more information.",
+    faculty("$Pronoun is likely to ask for more information.",
             "I would hope that you don't trust everything your fourth-grade teacher told you.  What else leads you to believe that the square root of four is two?");
   }
   elsif ($page == ++$pagenum) {
@@ -89,23 +98,27 @@ sub main {
             "<em>Hmmmmmm ....</em>");
   }
   elsif ($page == ++$pagenum) {
-    student("And you might even come up with an answer.  When you do so,",
+    student("And you might even come up with an answer.",
             "Two times two is four.  So two is the square root of four.");
   }
   elsif ($page == ++$pagenum) {
-    faculty("(S)he'll want to make sure you've thought carefully about your answer.",
+    student("When you come up with an answer,",
+            "<em>Whew!</em>");
+  }
+  elsif ($page == ++$pagenum) {
+    faculty("He/Ze/She will want to make sure you've thought carefully about your answer.",
             "You said that two is <em>the</em> square root of four.  Does four, perhaps, have more than one square root?");
   }
   elsif ($page == ++$pagenum) {
     student("When you do,",
-            "Okay, negative two is also a square root of four.  How about <q>Two is <em>a</em> square root of four</q> or <q>two is the <em>positive</em> square root of four.");
+            "Okay, I know that negative two is also a square root of four.  How about <q>Two is <em>a</em> square root of four</q> or <q>two is the <em>positive</em> square root of four.");
   }
   elsif ($page == ++$pagenum) {
-    faculty("(S)he might be impressed.",
+    faculty("$Pronoun might be impressed.",
             "See ... that wasn't so hard.");
   }
   elsif ($page == ++$pagenum) {
-    faculty("However, (s)he'll also want to check the range of your understanding.",
+    faculty("However, $pronoun will also want to check the range of your understanding.",
             "You've been working in base ten.  Some ancient civilizations worked in base 60.  Computers work in base 2.  What effect does the base have on your answer?");
   }
   elsif ($page == ++$pagenum) {
@@ -113,7 +126,7 @@ sub main {
             "The concept <q>two</q> is independent of the base used.  The numeral <q>2</q> in base ten is no different than the numeral <q>10</q> in base two.  Just as numeral 2 times numeral 2 base ten is equal to 4 base ten, so is numeral <q>10</q> times numeral <q>10</q> equal to <q>100</q> base two.");
   }
   elsif ($page == ++$pagenum) {
-    faculty("But (s)he'll challenge you to further expand your knowledge.",
+    faculty("But $pronoun will challenge you to further expand your knowledge.",
             "I'd like you to find a few references relating to your conclusion.");
   }
   elsif ($page == ++$pagenum) {
@@ -126,16 +139,16 @@ sub main {
             "It's true, I found it on the Web.");
   }
   elsif ($page == ++$pagenum) {
-    faculty("(S)he'll be impressed.",
+    faculty("$Pronoun will be impressed.",
             "The Web is crap.  Look!  The authors of this site don't even realize that four has more than one square root.");
   }
   elsif ($page == ++$pagenum) {
-    faculty("But (s)he'll challenge you to find more sources.",
+    faculty("But $pronoun will challenge you to find more sources.",
             "No more of this Web garbage.  Go look at something <em>printed</em>.  Print was good enough for me when I was in college, and it should be good enough for you.");
   }
   elsif ($page == ++$pagenum) {
     student("So you'll look for a textbook.",
-            "Mom!  Can you send me my gradeschool books!");
+            "Mom!  Can you send me my gradeschool books?");
   }
   elsif ($page == ++$pagenum) {
     bookpage("You might even find something.",
@@ -149,16 +162,16 @@ sub main {
             "See, my fourth grade textbook says so!");
   }
   elsif ($page == ++$pagenum) {
-    faculty("(S)he'll be impressed.",
+    faculty("$Pronoun will be impressed.",
             "It's wonderful that you can think at the level of a fourth-grade student.  I knew our standards had dropped, but I hadn't realized that they'd dropped so far.  <i>Textbooks are not appropriate sources for college students.  Elementary school textbooks are particularly inappropriate!</i>");
   }
   elsif ($page == ++$pagenum) {
-    faculty("But, once again, (s)he'll challenge you to find more sources.",
+    faculty("But, once again, he/she/zhe will challenge you to find more sources.",
             "Look, you're a college student.  College students look to sophisticated sources, like journal articles or scholarly texts.  Why don't you visit the library?");
   }
   elsif ($page == ++$pagenum) {
     student("You might just browse through the library",
-            "<em>Hmmm ... where's the <q>really trivial Math</q> section?</em>.  It's Q something.  It must be on the fourth floor.");
+            "<em>Hmmm ... where's the <q>really trivial math</q> section?</em>  It's Q something.  Someone told me it was on the fourth floor of Burling, but wouldn't math be in Kistle?");
   }
   elsif ($page == ++$pagenum) {
     librarian("But you're better off visiting a reference librarian.",
@@ -169,7 +182,7 @@ sub main {
             "You may not believe this, but my prof wants me to find interesting journal articles and academic books on the value of the square root of four.");
   }
   elsif ($page == ++$pagenum) {
-    librarian("(S)he'll reveal a wealth of perspectives.",
+    librarian("$Pronoun will reveal a wealth of perspectives.",
               "Hmmm ....  Well, there's some recent work in the philosophy of science on the social construction of scientific knowledge.  That might help.  In computer science, there are some interesting algorithms for computing square roots.  I believe the Newton-Raphson method is a relatively simple and straightforward place to start.  Oh, group theory might also be useful, since the size of the group can affect the interpretation of multiplication.");
   }
   elsif ($page == ++$pagenum) {
@@ -187,11 +200,11 @@ sub main {
             "Here are some <em>journal articles</em> and <em>academic texts</em>.  Are you satisfied?");
   }
   elsif ($page == ++$pagenum) {
-    faculty("(S)he'll be impressed.",
+    faculty("$Pronoun will be impressed.",
             "Three citations.  What did you do?  Just pick the first three books you saw?");
   }  
   elsif ($page == ++$pagenum) {
-    faculty("In fact, (s)he'll be so impressed by your research skills that she'll ask you to do further research.",
+    faculty("In fact, $Pronoun will be so impressed by your research skills that she'll ask you to do further research.",
            "Go find at least ten <em>useful</em> articles.");
   }
   elsif ($page == ++$pagenum) {
@@ -214,7 +227,7 @@ sub main {
             "One.  Two.  Three.  Four.  Five.  Six.  Seven.  Eight.  Nine.  Ten.  Eleven.   Eleven different references.  Okay?");
   }
   elsif ($page == ++$pagenum) {
-    faculty("(S)he'll reflect on the purpose of bibliographies.",
+    faculty("$Pronoun will reflect on the purpose of bibliographies.",
             "So you can list useful books.  Did you read them?");
   }  
   elsif ($page == ++$pagenum) {
@@ -245,7 +258,7 @@ We can find the square root of a number by starting at a smaller number than the
             "See!  I can read.  Can you?");
   }
   elsif ($page == ++$pagenum) {
-    bookpage("(S)he'll observe a few small errors in your notes.",
+    bookpage("$Pronoun will observe a few small errors in your notes.",
              "Perspectives on the Square Root of Four: An <em>Annotated</em> Bibliography",
              "1",
              "<p>Sokal, A. (1996). Transgressing the Boundaries: Toward a Transformative Hermeneutics of Quantum Gravity.  <i>Social Text</i> 46/47, pp. 217-252.</p>
@@ -263,7 +276,7 @@ We can find the square root of a number by starting at a smaller number than the
 <p class=\"wrong\">While this is a method of finding very approximate square roots, it's not a very good method.  Reread the Newton-Raphson method.</p>");
   }
   elsif ($page == ++$pagenum) {
-    faculty("To help you develop the skills to understand these complex readings, (s)he'll send you to the reading lab.",
+    faculty("To help you develop the skills to understand these complex readings, he/she/zhe will send you to the reading lab.",
             "It's not my job to deal with students who lack remedial skills.  Try the reading lab, but I think you're even beyond their help.");
   }
   elsif ($page == ++$pagenum) {
@@ -287,7 +300,7 @@ divide-and-conquer technique.
 </blockquote>");
   }
   elsif ($page == ++$pagenum) {
-    faculty("As (s)he reads your corrected annotated bibliography,",
+    faculty("As he/she/zhe reads your corrected annotated bibliography,",
             "Hmmm ... ");
   }
   elsif ($page == ++$pagenum) {
@@ -295,7 +308,7 @@ divide-and-conquer technique.
              "I see you have a book on algorithms here.  When I wrote my dissertation, I used a book on algorithms.");
   }
   elsif ($page == ++$pagenum) {
-     faculty("(S)he will reflect on the details of the related work.",
+     faculty("$Pronoun will reflect on the details of the related work.",
              "Blah.  Blah.  Blah.  Blah blah.  Blah blah blah.  Blah.");
   }
   elsif ($page == ++$pagenum) {
@@ -307,7 +320,7 @@ divide-and-conquer technique.
              "Zzzzzzzz.  Wha?  Yes, that was very interesting.");
   }
   elsif ($page == ++$pagenum) {
-     faculty("(S)he'll volunteer to loan you the reference.",
+     faculty("$Pronoun will volunteer to loan you the reference.",
              "You'll probably find that old book an interesting contrast to your modern reference.  Let me grab it for you.  It will only take a moment.");
   }
   elsif ($page == ++$pagenum) {
@@ -315,7 +328,7 @@ divide-and-conquer technique.
              "It's not in either file cabinet.  It's not in the two piles by my desk.  Now where is that article?");
   }
   elsif ($page == ++$pagenum) {
-     faculty("(S)he'll give up.",
+     faculty("$Pronoun will give up.",
              "I know I'll find it two minutes after you leave.");
   }
   elsif ($page == ++$pagenum) {
@@ -345,7 +358,7 @@ divide-and-conquer technique.
              "<strong>I found it!</strong>  How will it help me understand this topic?");
   }
   elsif ($page == ++$pagenum) {
-     faculty("(S)he'll discuss it with you.",
+     faculty("$Pronoun discuss it with you.",
              "Why did you bring that to me?  I found it two minutes after you left my office.  Anyway, I was wrong.  It's not relevant to square roots.");
   }
   elsif ($page == ++$pagenum) {
@@ -353,7 +366,7 @@ divide-and-conquer technique.
              "Since you're here, I have to tell you I'm very impressed by the effort you've put into this topic.");
   }
   elsif ($page == ++$pagenum) {
-     faculty("(S)he'll ask you to present your results to the class.",
+     faculty("$Pronoun will ask you to present your results to the class.",
              "Why don't you give a presentation on it?");
   }
   elsif ($page == ++$pagenum) {
@@ -369,7 +382,7 @@ divide-and-conquer technique.
              "Today, I'd like to talk about the wonder of square roots ...");
   }
   elsif ($page == ++$pagenum) {
-     faculty("(S)he'll give you a reprieve.",
+     faculty("$Pronoun will give you a reprieve.",
              "I don't trust you to give it today.  Why don't we go over it this afternoon first?");
   }
   elsif ($page == ++$pagenum) {
@@ -377,7 +390,7 @@ divide-and-conquer technique.
              "Thanks for taking the time to go over this talk with me.  I'm quite uncomfortable about it.");
   }
   elsif ($page == ++$pagenum) {
-     faculty("(S)he'll ask you to reschedule.",
+     faculty("$Pronoun will ask you to reschedule.",
              "Did I say I'd meet with you today?  I'm booked solid with more important tasks.  Come back tomorrow.");
   }
   elsif ($page == ++$pagenum) {
@@ -385,7 +398,7 @@ divide-and-conquer technique.
              "Thanks for taking the time to go over this talk with me.  I'm quite uncomfortable about it.");
   }
   elsif ($page == ++$pagenum) {
-     faculty("(S)he'll ask to hear your presentation.",
+     faculty("$Pronoun will ask to hear your presentation.",
              "Let's get this over with.");
   }
   elsif ($page == ++$pagenum) {
@@ -393,7 +406,7 @@ divide-and-conquer technique.
              "Today, I'd like to talk about the wonder of square roots.  People from many ages and many walks of life have been stumped by the problem of computing the square root of four.  Although some aspects of square roots are socially constructed, evidence shows that the Newton-Raphson method blah blah blah blah blah.");
   }
   elsif ($page == ++$pagenum) {
-     faculty("(S)he'll give you some helpful comments",
+     faculty("$Pronoun will give you some helpful comments.",
              "That was perhaps the worst presentation I've ever heard.");
   }
   elsif ($page == ++$pagenum) {
@@ -441,15 +454,19 @@ divide-and-conquer technique.
              "Oh, don't forget to zip your fly.");
   }
   elsif ($page == ++$pagenum) {
-     student("You might then choose to return to our room to revise your talk.  The next day,",
-             "<em>I am <strong>so</strong> embarrased.</em>");
+     student("The next day,",
+             "<em>I think I'm ready.  I think I'm ready.</em>");
   }
   elsif ($page == ++$pagenum) {
-     student("You'll give your talk.  Afterward,",
+     student("You'll give your talk.",
              "Wisdom.  Wisdom. Wisdom. Some knowledge is absolute.  Wisdom.");
   }
   elsif ($page == ++$pagenum) {
-     faculty("(S)he'll ask you to write a paper.",
+      student("Afterward,",
+              "<em>Whew!</em>");
+  }
+  elsif ($page == ++$pagenum) {
+     faculty("$Pronoun will ask you to write a paper.",
              "That wasn't so bad.  Since you find the topic so interesting, why don't you write a ten page paper on it?");
   }
   elsif ($page == ++$pagenum) {
@@ -465,7 +482,7 @@ divide-and-conquer technique.
              "<em>Sleep, who needs sleep?</em>");
   }
   elsif ($page == ++$pagenum) {
-     faculty("(S)he'll be so impressed that (s)he'll encourage you to write more.",
+     faculty("$Pronoun will be so impressed that $pronoun will encourage you to write more.",
              "This looks like ten double-spaced pages.  I want ten <em>single-spaced</em> pages.");
   }
   elsif ($page == ++$pagenum) {
@@ -477,7 +494,7 @@ divide-and-conquer technique.
              "<em>Sleep, who needs sleep?</em>");
   }
   elsif ($page == ++$pagenum) {
-     faculty("(S)he might ask you to summarize your paper.",
+     faculty("He/She/Zhe might ask you to summarize your paper.",
              "What's your thesis?");
   }
   elsif ($page == ++$pagenum) {
@@ -485,7 +502,7 @@ divide-and-conquer technique.
              "Two is a square root of four.");
   }
   elsif ($page == ++$pagenum) {
-     faculty("(S)he'll probably talk to you about alternatives,",
+     faculty("$Pronoun will probably talk to you about alternatives,",
              "That's not a thesis.  Haven't you read [SimpsonE]'s guidelines for writing a thesis?");
   }
   elsif ($page == ++$pagenum) {
@@ -497,7 +514,7 @@ divide-and-conquer technique.
              "What else should I suggest?");
   }
   elsif ($page == ++$pagenum) {
-     faculty("(S)he should send you to the writing lab.",
+     faculty("$Pronoun should send you to the writing lab.",
              "Go to the writing lab.");
   }
   elsif ($page == ++$pagenum) {
@@ -508,7 +525,7 @@ divide-and-conquer technique.
     bookpage("And update your thesis.",
              "Perspectives on the Square Root of Four",
              "1",
-             "Although a variety of sources, including scientific relativists, algorithmic approximators, and and modular mathematicians, have questioned the possibility of computing an exact square root, certain numbers, such as four, have exact square roots.");
+             "Although a variety of sources -- including scientific relativists, algorithmic approximators, and modular mathematicians -- have questioned the possibility of computing an exact square root, certain numbers, such as four, have exact square roots.");
   }
   elsif ($page == ++$pagenum) {
     faculty("After your prof approves the extended thesis,",
@@ -588,34 +605,34 @@ divide-and-conquer technique.
              "Your paper was very nice, much nicer than I expected.  I've waived the late penalty.");
   }
   elsif ($page == ++$pagenum) {
-     faculty("Your faculty member might be so impressed.",
+     faculty("Your faculty member might be so impressed,",
              "Your paper has inspired me.");
   }
   elsif ($page == ++$pagenum) {
-     webpage("That (s)he creates a conference.",
-             "http://www.grinnell.edu/conferences/squareroot/",
-             "<p><strong>Square Roots: A Post-Technological Perspective.</strong></p>  <p><em>Day One: Absolute Knowledge and the Social Construction of Social Constructivism.</em></p>  <p><em>Day Two: Group Theory and the Theory of Groups.</em></p>  <p><em>Day Three: Archaeology of Ancient Algorithms.</em></p>");
+     webpage("That $pronoun creates a conference.",
+             "http://www.grinnell.edu/academic/general/events/conferences/squareroot/",
+             "<p><strong>Square Roots: A Post-Technological Perspective</strong></p>  <p><em>Day One: Absolute Knowledge and the Social Construction of Social Constructivism.</em></p>  <p><em>Day Two: Group Theory and the Theory of Groups.</em></p>  <p><em>Day Three: Archaeology of Ancient Algorithms.</em></p>");
   }
   elsif ($page == ++$pagenum) {
-     student("After the conference",
+     student("After the conference,",
              "<em>Three days of talks!  Ouch.</em>");
   }
   elsif ($page == ++$pagenum) {
-     faculty("(S)he might quiz the class about the conference.",
+     faculty("$Pronoun might quiz the class about the conference.",
              "Compare and contrast social construcivism, group theory, and asymptotic analysis.  You have ten minutes.");
   }
   elsif ($page == ++$pagenum) {
-     faculty("After the quiz", "Time!");
+     faculty("After the quiz,", "Time!");
   }
   elsif ($page == ++$pagenum) {
-     student("She might notice some puzzled faces.", "<em>Wha?</em>");
+     student("$Pronoun might notice some puzzled faces.", "<em>Wha?</em>");
   }
   elsif ($page == ++$pagenum) {
      faculty("And when a prof notices puzzled faces,",
              "Some of you seem a little puzzled.");
   }
   elsif ($page == ++$pagenum) {
-     faculty("(S)he'll probably ask for questions.",
+     faculty("$Pronoun will probably ask for questions.",
              "<strong>Any questions?</strong>");
   }
   elsif ($page == ++$pagenum) {
@@ -722,14 +739,15 @@ sub page {
   my $h1 = "";  
   if (!$caption) { $h1 = "<h1>$title</h1>"; }
   # Set up the navigation bar
-  my $nav = "<p class=\"nav\">[<a href=\"$url?page=1\">Start</a>]\n";
+  # my $nav = "<p class=\"nav\">[<a href=\"$url?page=1\">Start</a>]\n";
+  my $nav = "<p class=\"nav\">\n";
+  my $prevpage = $page - 1;
+  my $nextpage = $page + 1;
   if ($page > 1) {
-    my $prevpage = $page - 1;
-    $nav .= "<a href=\"$url?page=$prevpage\">&lt;</a>\n";
+    $nav .= "<a href=\"$url?page=$prevpage\">&lt; Prev</a>\n";
   }
   if ($page) {
-    my $nextpage = $page + 1;
-    $nav .= "Page $page\n<a href=\"$url?page=$nextpage\">&gt;</a>\n";
+    $nav .= "<b>Page $page</b>\n<a href=\"$url?page=$nextpage\">Next &gt;</a>\n";
   }
   $nav .= "<\/p>\n";
   my $html =<<"PAGE";
@@ -740,15 +758,27 @@ sub page {
 <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>$title</title>
 <link rel="stylesheet" type="text/css" href="askprof.css">
+<script language="javascript">
+document.onkeypress = function(evt) {
+  // Get the code for the character using one of the many alternatives
+  var code = evt.which || evt.keyCode || evt.charCode;
+  switch (code) {
+    case 32: // Space bar
+      document.location = "?page=$nextpage";
+      break;
+  } // switch 
+}; // document.onkeypress
+</script>
 </head>
 <body>
 <div class="bookpage">
+<p class="title"><a href="?page=1">If You Ask Your Prof a Question</a></p>
 $nav
 $h1
 $body
 </div>
-<p class="endnotes">This is a <em>draft</em> of a work in progress by
-Samuel A. Rebelsky.  It is Copyright &copy; 2003 by Samuel A. Rebelsky.
+<p class="endnotes">This is <em>draft</em> 0.1.1 of a work in progress by
+Samuel A. Rebelsky.  It is Copyright &copy; 2003-14 by Samuel A. Rebelsky.
 All rights reserved.  Images are taken from the Grinnell Web Site and 
 used without permission.</p>
 </body>
@@ -757,3 +787,15 @@ PAGE
   print $html;
 } # page
 
+
+# pronoun(page)
+# Pronoun(page)
+#   Generate the next pronoun set
+sub pronoun() {
+  my $page = shift;
+  return $page . $lcPronouns[$page % 6];
+} # pronoun
+sub Pronoun($page) {
+  my $page = shift;
+  return $page . $lcPronouns[$page % 6];
+} # Pronoun
