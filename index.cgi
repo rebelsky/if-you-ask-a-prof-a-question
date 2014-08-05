@@ -58,7 +58,7 @@ sub main {
   if ($page == ++$pagenum) {
     page("If You Ask Your Prof A Question",
          "",
-         "<h2>A Guide to Academic Life at Grinnell</h2>"
+         "<h2>A Primer on Academic Life at Grinnell</h2>"
          );
   }
   elsif ($page == ++$pagenum) {
@@ -186,8 +186,8 @@ sub main {
               "Hmmm ....  Well, there's some recent work in the philosophy of science on the social construction of scientific knowledge.  That might help.  In computer science, there are some interesting algorithms for computing square roots.  I believe the Newton-Raphson method is a relatively simple and straightforward place to start.  Oh, group theory might also be useful, since the size of the group can affect the interpretation of multiplication.");
   }
   elsif ($page == ++$pagenum) {
-    student("You'll find the articles.",
-            "<em>I hate math.  I hate computer science.  I hate post-modern perspectives on the world.  Why do I have to read this stuff?");
+    student("You'll find the sources.",
+            "<em>While I love math, I hate computer science.  And I really don't even get what post-modern perspectives on the world are.  Why do I have to read this stuff?");
   }
   elsif ($page == ++$pagenum) {
     bookpage("You'll produce a bibliography.",
@@ -205,10 +205,10 @@ sub main {
   }  
   elsif ($page == ++$pagenum) {
     faculty("In fact, $Pronoun will be so impressed by your research skills that she'll ask you to do further research.",
-           "Go find at least ten <em>useful</em> articles.");
+           "Go find at least ten <em>useful</em> sources.");
   }
   elsif ($page == ++$pagenum) {
-    student("So you'll go back to the library and find more articles.",
+    student("So you'll go back to the library and find more sources.",
             "");
   }
   elsif ($page == ++$pagenum) {
@@ -224,7 +224,7 @@ sub main {
   }
   elsif ($page == ++$pagenum) {
     student("And show it to your prof.",
-            "One.  Two.  Three.  Four.  Five.  Six.  Seven.  Eight.  Nine.  Ten.  Eleven.   Eleven different references.  Okay?");
+            "One.  Two.  Three.  Four.  Five.  Six.  Seven.  Eight.  Nine.  Ten.  Eleven.   Eleven different sources.  Okay?");
   }
   elsif ($page == ++$pagenum) {
     faculty("$Pronoun will reflect on the purpose of bibliographies.",
@@ -288,15 +288,16 @@ We can find the square root of a number by starting at a smaller number than the
              "Perspectives on the Square Root of Four: An <em>Annotated</em> Bibliography",
              "1",
              "<p>Sokal, A. (1996). Transgressing the Boundaries: Toward a Transformative Hermeneutics of Quantum Gravity.  <i>Social Text</i> 46/47, pp. 217-252.</p>
-<blockquote>In a piece of biting satire, Sokal demonstrates the flaws in the post-modern view of scientific knowledge.  He concludes, implicitly, that there are some absolute scientific truths.  One such truth is that 2*2 = 4.</blockquote>
+<blockquote>In a piece of biting satire, Sokal demonstrates flaws in the post-modern view of scientific knowledge.  He concludes, implicitly, that there are some absolute scientific truths.  One such truth is that 2*2 = 4.</blockquote>
 <p>Herstein, I. N. (1996).  <i>Abstract Algebra</i>, 3rd Edition.  John Wiley &amp; Sons.</p>
 <blockquote>
-A huge overview of math I still cannot hope to understand.  However, I do note that the simple groups of integers modulo various values may be useful.  In particular, 5 * 5 = 4 mod 16, so 5 is a square root of 4 when working in the modulo group of 16.
+A huge overview of math I still cannot hope to understand.  However, I do note that the simple groups of integers modulo various values may be useful.  In particular, 4 * 4 = 5 mod 11, so 4 is a square root of 5 when working in the modulus group of 11.
 </blockquote>
 <p>Press, W.T., Flannery, B. P., Teukolsky, S.A., and Wetterling, W. T. (1993).  <i>Numerical Recipes in C</i>.  Cambridge University Press.</p>
 <blockquote>
 We can find an approximation of the square root of a number by using the 
-divide-and-conquer technique.
+divide-and-conquer technique.  One such approach was developed by Newton
+and Raphson.
 </blockquote>");
   }
   elsif ($page == ++$pagenum) {
@@ -344,14 +345,14 @@ divide-and-conquer technique.
                "Not another one of those <q>Maybe green, Maybe blue</q> requests!");
   }
   elsif ($page == ++$pagenum) {
-     student("After eight hours of hard work,",
+     student("After hours of hard work,",
              "Not this one.  Not this one.  Not this one.  Not this one.  ...");
   }
   elsif ($page == ++$pagenum) {
      bookpage("You'll find the book",
               "The Blue/Green Algorithms Book",
-              "22",
-              "<p><i>On this page, you'll find every algorithm you'll need for your doctoral dissertation.</i></p>");
+              "42",
+              "<p><i>On this page, you'll find every algorithm you'll need for your doctoral dissertation.</i></p><p>...</p>");
   }
   elsif ($page == ++$pagenum) {
      student("And bring it back to your prof.",
@@ -379,7 +380,7 @@ divide-and-conquer technique.
   }
   elsif ($page == ++$pagenum) {
      student("At the start of the next class,",
-             "Today, I'd like to talk about the wonder of square roots ...");
+             "<em>I hope I'm ready.  Let's see ...  I think I'll start with <q>Today, I'd like to talk about the wonder of square roots ...</q>.");
   }
   elsif ($page == ++$pagenum) {
      faculty("$Pronoun will give you a reprieve.",
@@ -435,11 +436,11 @@ divide-and-conquer technique.
   }
   elsif ($page == ++$pagenum) {
      faculty("Your prof may pause for a moment ...",
-             "<em>Why did we close the rhetoric and speech department?  Why did we close the rhetoric and speech department?  Why did we close the rhetoric and speech department?</em>");
+             "<em>Why did we close the rhetoric and speech department?  Why did we close the rhetoric and speech department?  Why did we close the rhetoric and speech department?  And how do I convince the writing lab that they should also do presentations?</em>");
   }
   elsif ($page == ++$pagenum) {
      faculty("Before providing some helpful advice.",
-             "One: Know your audience.  While I know about Sokal, modulus, and the Newton-Raphson method, your colleagues do not.  Explain the details.");
+             "One: Know your audience.  While I know about Sokal, modulus, and the Newton-Raphson method, your colleagues probably do not.  Explain the details.");
   }
   elsif ($page == ++$pagenum) {
      faculty("And some more.",
@@ -570,7 +571,7 @@ divide-and-conquer technique.
   }
   elsif ($page == ++$pagenum) {
     student("You might take the time to incorporate their suggestions.",
-            "It's already five days late.  Oh well, it's no longer worth my time.");
+            "It's already five days late.  Oh well, I might as well spend one more day on it.");
   }
   elsif ($page == ++$pagenum) {
     student("When you turn it in,",
@@ -581,7 +582,7 @@ divide-and-conquer technique.
             "There should be two spaces after each period.  You used only one.  I refuse to grade this.");
   }
   elsif ($page == ++$pagenum) {
-    student("So you fix it.",
+    student("So you'll fix it.",
             "<em>Edit.  Edit.  Edit.  Edit.</em>");
   }
   elsif ($page == ++$pagenum) {
@@ -610,7 +611,7 @@ divide-and-conquer technique.
   }
   elsif ($page == ++$pagenum) {
      webpage("That $pronoun creates a conference.",
-             "http://www.grinnell.edu/academic/general/events/conferences/squareroot/",
+             "http://www.grinnell.edu/academic/general/events/conferences/faculty-sponsored/square-roots/",
              "<p><strong>Square Roots: A Post-Technological Perspective</strong></p>  <p><em>Day One: Absolute Knowledge and the Social Construction of Social Constructivism.</em></p>  <p><em>Day Two: Group Theory and the Theory of Groups.</em></p>  <p><em>Day Three: Archaeology of Ancient Algorithms.</em></p>");
   }
   elsif ($page == ++$pagenum) {
@@ -619,7 +620,7 @@ divide-and-conquer technique.
   }
   elsif ($page == ++$pagenum) {
      faculty("$Pronoun might quiz the class about the conference.",
-             "Compare and contrast social construcivism, group theory, and asymptotic analysis.  You have ten minutes.");
+             "Compare and contrast social constructivism, group theory, and asymptotic analysis.  You have ten minutes.");
   }
   elsif ($page == ++$pagenum) {
      faculty("After the quiz,", "Time!");
@@ -637,6 +638,9 @@ divide-and-conquer technique.
   }
   elsif ($page == ++$pagenum) {
     page("A Moral", "", "<h2>Ask the right questions.</h2>");
+  }
+  elsif ($page == ++$pagenum) {
+    page("A Moral", "", "<h2>Take advantage of Grinnell's resources.</h2>");
   }
   elsif ($page == ++$pagenum) {
     page("A Moral", "", "<h2>Laugh at your stress.</h2>");
@@ -777,7 +781,7 @@ $nav
 $h1
 $body
 </div>
-<p class="endnotes">This is <em>draft</em> 0.1.1 of a work in progress by
+<p class="endnotes">This is <em>draft</em> 0.1.2 of a work in progress by
 Samuel A. Rebelsky.  It is Copyright &copy; 2003-14 by Samuel A. Rebelsky.
 All rights reserved.  Images are taken from the Grinnell Web Site and 
 used without permission.</p>
