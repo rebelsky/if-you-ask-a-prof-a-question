@@ -1,10 +1,10 @@
 body {
-  background: #00dddd;
+  background: #FFFFFF;
 }
 
 DIV.bookpage {
   margin:0.1in 0.5in 0in 0.5in;
-  background-color: white;
+  background-color: #DDDDDD;
   color: black;
   border:2px solid black;
 }
@@ -28,7 +28,6 @@ H1 {
 H1.caption {
   padding:0.1in;
   text-align: left;
-  background: #eeeeee;
   font-size: 14pt;
   color: black;
 }
@@ -38,7 +37,8 @@ P {
 }
 
 P.nav {
-  padding:0.1in;
+  padding: 0;
+  margin: 0;
   font-family: Helvetica, sans-serif;
   font-size: 9pt;
   text-align: right;
@@ -53,17 +53,35 @@ p.nav a:visited{
   text-decoration: none;
 }
 
+P.title {
+  font-family: Helvetica, sans-serif;
+  font-size: 9pt;
+  font-weight: bold;
+  font-style: italic;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+}
+P.title a:link,
+P.title a:visited {
+  text-decoration: none;
+}
+
+p.librarian,
+p.faculty,
+p.student {
+  font-size: large;
+  font-weight: bold;
+}
+
 p.librarian {
   color: green;
-  font-size: 12pt;
 }
 p.faculty {
   color: red;
-  font-size: 12pt;
 }
 p.student {
   color: blue;
-  font-size: 12pt;
 }
 
 td.left {
@@ -87,10 +105,9 @@ P.wrong {
 }
 
 P.endnotes {
-  margin:0.2in 0.6in 0in 0.6in;
+  margin-left: 25%;
+  margin-right: 0.6in;
   background-color: white;
-  color: grey;
-  border:2px solid black;
   color: grey;
   font-size: 8pt;
 }
