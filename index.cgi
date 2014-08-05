@@ -111,7 +111,7 @@ sub main {
   }
   elsif ($page == ++$pagenum) {
     student("When you do,",
-            "Okay, I know that negative two is also a square root of four.  How about <q>Two is <em>a</em> square root of four</q> or <q>two is the <em>positive</em> square root of four.");
+            "Okay, I know that negative two is also a square root of four.  How about <q>Two is <em>a</em> square root of four</q> or <q>Two is the <em>positive</em> square root of four</q>?");
   }
   elsif ($page == ++$pagenum) {
     faculty("$Pronoun might be impressed.",
@@ -123,7 +123,7 @@ sub main {
   }
   elsif ($page == ++$pagenum) {
     student("If you're lucky, your knowledge will be broad enough to consider the expanded question.",
-            "The concept <q>two</q> is independent of the base used.  The numeral <q>2</q> in base ten is no different than the numeral <q>10</q> in base two.  Just as numeral 2 times numeral 2 base ten is equal to 4 base ten, so is numeral <q>10</q> times numeral <q>10</q> equal to <q>100</q> base two.");
+            "The concept <q>two</q> is independent of the base used.  The numeral <q>2</q> in base ten is no different than the numeral <q>10</q> (that is <q>one zero</q>) in base two.  Just as numeral 2 times numeral 2 base ten is equal to 4 base ten, so is numeral <q>10</q> times numeral <q>10</q> equal to <q>100</q> (<q>one zero zero</q>) base two.");
   }
   elsif ($page == ++$pagenum) {
     faculty("But $pronoun will challenge you to further expand your knowledge.",
@@ -163,7 +163,7 @@ sub main {
   }
   elsif ($page == ++$pagenum) {
     faculty("$Pronoun will be impressed.",
-            "It's wonderful that you can think at the level of a fourth-grade student.  I knew our standards had dropped, but I hadn't realized that they'd dropped so far.  <i>Textbooks are not appropriate sources for college students.  Elementary school textbooks are particularly inappropriate!</i>");
+            "It's wonderful that you can think at the level of a fourth-grade student.  I knew our standards had dropped, but I hadn't realized that they'd dropped so far.  <i>Textbooks are not appropriate sources for college students!</i>  Elementary school textbooks are particularly inappropriate.");
   }
   elsif ($page == ++$pagenum) {
     faculty("But, once again, he/she/zhe will challenge you to find more sources.",
@@ -171,7 +171,7 @@ sub main {
   }
   elsif ($page == ++$pagenum) {
     student("You might just browse through the library",
-            "<em>Hmmm ... where's the <q>really trivial math</q> section?</em>  It's Q something.  Someone told me it was on the fourth floor of Burling, but wouldn't math be in Kistle?");
+            "<em>Hmmm ... where's the <q>really trivial math</q> section?</em>  Grinnell uses the Library of Congress system, so it's Q something.  Someone told me it was on the fourth floor of Burling, but wouldn't math be in Kistle?");
   }
   elsif ($page == ++$pagenum) {
     librarian("But you're better off visiting a reference librarian.",
@@ -201,7 +201,7 @@ sub main {
   }
   elsif ($page == ++$pagenum) {
     faculty("$Pronoun will be impressed.",
-            "Three citations.  What did you do?  Just pick the first three books you saw?");
+            "Three citations.  What did you do?  Just pick the first three things you saw?");
   }  
   elsif ($page == ++$pagenum) {
     faculty("In fact, $Pronoun will be so impressed by your research skills that she'll ask you to do further research.",
@@ -781,7 +781,7 @@ $nav
 $h1
 $body
 </div>
-<p class="endnotes">This is <em>draft</em> 0.1.2 of a work in progress by
+<p class="endnotes">This is <em>draft</em> 0.1.3 of a work in progress by
 Samuel A. Rebelsky.  It is Copyright &copy; 2003-14 by Samuel A. Rebelsky.
 All rights reserved.  Images are taken from the Grinnell Web Site and 
 used without permission.</p>
