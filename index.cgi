@@ -250,7 +250,7 @@ A huge overview of math I cannnot hope to understand.  However, I do note that t
 </blockquote>
 <p>Press, W.T., Flannery, B. P., Teukolsky, S.A., and Wetterling, W. T. (1993).  <i>Numerical Recipes in C</i>.  Cambridge University Press.</p>
 <blockquote>
-We can find the square root of a number by starting at a smaller number than the square root and repeatedly trying sightly larger numbers until we find the sequare root.
+We can find the square root of a number by starting at a smaller number than the square root and repeatedly trying sightly larger numbers until we find the square root.
 </blockquote>");
   }
   elsif ($page == ++$pagenum) {
@@ -359,7 +359,7 @@ and Raphson.
              "<strong>I found it!</strong>  How will it help me understand this topic?");
   }
   elsif ($page == ++$pagenum) {
-     faculty("$Pronoun discuss it with you.",
+     faculty("$Pronoun will discuss it with you.",
              "Why did you bring that to me?  I found it two minutes after you left my office.  Anyway, I was wrong.  It's not relevant to square roots.");
   }
   elsif ($page == ++$pagenum) {
@@ -391,7 +391,7 @@ and Raphson.
              "Thanks for taking the time to go over this talk with me.  I'm quite uncomfortable about it.");
   }
   elsif ($page == ++$pagenum) {
-     faculty("$Pronoun will ask you to reschedule.",
+     faculty("$Pronoun will make sure that you have enough time to prepare.",
              "Did I say I'd meet with you today?  I'm booked solid with more important tasks.  Come back tomorrow.");
   }
   elsif ($page == ++$pagenum) {
@@ -781,8 +781,8 @@ $nav
 $h1
 $body
 </div>
-<p class="endnotes">This is <em>draft</em> 0.1.3 of a work in progress by
-Samuel A. Rebelsky.  It is Copyright &copy; 2003-14 by Samuel A. Rebelsky.
+<p class="endnotes">This is <em>draft</em> 0.1.4 of a work in progress by
+Samuel A. Rebelsky.  It is Copyright &copy; 2003-16 by Samuel A. Rebelsky.
 All rights reserved.  Images are taken from the Grinnell Web Site and 
 used without permission.</p>
 </body>
