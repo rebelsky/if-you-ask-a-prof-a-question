@@ -250,7 +250,7 @@ A huge overview of math I cannnot hope to understand.  However, I do note that t
 </blockquote>
 <p>Press, W.T., Flannery, B. P., Teukolsky, S.A., and Wetterling, W. T. (1993).  <i>Numerical Recipes in C</i>.  Cambridge University Press.</p>
 <blockquote>
-We can find the square root of a number by starting at a smaller number than the square root and repeatedly trying sightly larger numbers until we find the square root.
+We can find the square root of a number by starting at a smaller number than the square root and repeatedly trying slightly larger numbers until we find the square root.
 </blockquote>");
   }
   elsif ($page == ++$pagenum) {
@@ -271,7 +271,7 @@ A huge overview of math I cannot hope to understand.  However, I do note that th
 <p class=\"wrong\">Wrong!  Can't you do simple math?</p>
 <p>Press, W.T., Flannery, B. P., Teukolsky, S.A., and Wetterling, W. T. (1993).  <i>Numerical Recipes in C</i>.  Cambridge University Press.</p>
 <blockquote>
-We can find the square root of a number by starting at a smaller number than the square root and repeatedly trying sightly larger numbers until we find the sequare root.
+We can find the square root of a number by starting at a smaller number than the square root and repeatedly trying slightly larger numbers until we find the sequare root.
 </blockquote>
 <p class=\"wrong\">While this is a method of finding very approximate square roots, it's not a very good method.  Reread the Newton-Raphson method.</p>");
   }
